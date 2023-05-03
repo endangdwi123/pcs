@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pcs/firstscreen.dart';
 import 'package:pcs/fourthscreen.dart';
+import 'package:pcs/route.dart';
 import 'package:pcs/secondscreen.dart';
 
 void main(){
@@ -15,10 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: FirstScreen(),
       debugShowCheckedModeBanner: false,
-      routes: {
-        '/fourth':(context) => FourthScreen(),
-      
-      },
+      onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
 }
